@@ -150,6 +150,10 @@ void testContains2() {
 	assertFalse(List.contains(H));
 }
 @Test
+void testContains3() {
+	assertTrue(List.contains(P));
+}
+@Test
 void TheLastTest1() {
 	ILinkedList SubList=new Study2();
 	SubList=(Study2)(List.sublist(1,3));
@@ -197,6 +201,15 @@ void TheLastTest9() {
 	PolyNode C=new PolyNode(12,15);
 	assertThrows(IllegalArgumentException.class,()->List.add(5, C));
 }
+@Test
+void TheLastTestK() {
+	assertThrows(IllegalArgumentException.class,()->List.add(12,P));;
+}
+@Test
+void TheLastTestJ() {
+	assertThrows(IllegalArgumentException.class,()->List.remove(-5));
+}
+
 @Test
 void TheLastTestm() {
 	PolyNode In =new PolyNode(20,21);
